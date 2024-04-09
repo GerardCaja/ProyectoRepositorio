@@ -5,7 +5,7 @@ using TMPro;
 
 public class Dialogos : MonoBehaviour
 {
-    public TMP_Text textBox;
+    /*public TMP_Text textBox;
     private string[] dialogueLines;
     private int currentLine;
     private bool playerInRange = false;
@@ -16,15 +16,15 @@ public class Dialogos : MonoBehaviour
     }*/
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
             ShowDialogue();
         }
-    }
+    }*/
 
-    void ShowDialogue()
+    /*void ShowDialogue()
     {
         if(currentLine < dialogueLines.Length)
         {
@@ -35,9 +35,9 @@ public class Dialogos : MonoBehaviour
         {
             textBox.text = "Fin del dialogo";
         }
-    }
+    }*/
 
-    void OnTriggerEnter(Collider collider)
+    /*void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "Player")
         {
@@ -51,5 +51,5 @@ public class Dialogos : MonoBehaviour
         {
             playerInRange = false;
         }
-    }
+    }*/
 }

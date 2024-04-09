@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HUD.unity
     guid: 0dac3d9930992964f9c60397fe7f35a0
+  - enabled: 1
+    path: Assets/Scenes/MaiaFeliz.unity
+    guid: 14aac3adcd184d24f9c29943b8019827
   m_configObjects: {}

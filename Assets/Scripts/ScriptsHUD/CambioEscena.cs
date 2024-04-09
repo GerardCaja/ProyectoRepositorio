@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {
-    public void CambiarEscena(string nombre)
+    public void CambiarEscena(string MaiaFeliz)
     {
-        SceneManager.LoadScene(nombre);
+        SceneManager.LoadScene(MaiaFeliz);
     }
     // Start is called before the first frame update
     void Start()

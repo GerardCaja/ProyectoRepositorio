@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueAnimation : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class DialogueAnimation : MonoBehaviour
     public string[] dialogueLines;
     public int dialogueIndex;
     private bool imTalking;
+    public TMP_Text textBox;
+    //private string[] dialogueLines;
+    private int currentLine;
+    private bool playerInRange = false;
 
     void Start()
     {
@@ -27,6 +33,16 @@ public class DialogueAnimation : MonoBehaviour
             
         }
     }
+
+    void FixedUpdate()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && playerInRange)
+        {
+            ShowDialogue();
+        }
+    }
+
+
     void  StartDialogue()
     {
        StartCoroutine(ShowText(dialogueLines[dialogueIndex]));
@@ -53,5 +69,39 @@ public class DialogueAnimation : MonoBehaviour
         dialogueText.text = null; 
         dialogueIndex++;
         ShowNextLine();
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if(collider.gameObject.tag == "Player")
+        {
+            playerInRange = false;
+        }
+    }
+
+      void ShowDialogue()
+    {
+        if(currentLine < dialogueLines.Length)
+        {
+            textBox.text = dialogueLines[currentLine];
+            currentLine++;
+        }
+        else
+        {
+            textBox.text = "Fin del dialogo";
+        }
+    }
+
+    public void CambiarNivel()
+    {
+        SceneManager.LoadScene(2);
     }
 }

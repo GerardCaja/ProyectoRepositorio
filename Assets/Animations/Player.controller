@@ -73,7 +73,7 @@ BlendTree:
     m_DirectBlendParameter: VelX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4781951162920444690, guid: 15de403828641254a96dd8ecc8550e80, type: 3}
+    m_Motion: {fileID: 4781951162920444690, guid: 700160fa198c692489a8d20dfed3a4bc, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0.2}
     m_TimeScale: 1
