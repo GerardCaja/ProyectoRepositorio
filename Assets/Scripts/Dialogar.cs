@@ -14,5 +14,12 @@ public class Dialogar : MonoBehaviour
             // Activa el Canvas
             canvas.SetActive(true);
         }
+
+        // Si se presiona la tecla "Escape"
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Desactiva el Canvas
+            canvas.SetActive(false);
+        }
     }
 }
