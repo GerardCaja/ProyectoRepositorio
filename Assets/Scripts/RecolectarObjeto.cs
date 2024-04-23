@@ -25,7 +25,9 @@ public class RecolectarObjeto : MonoBehaviour
                         objetoCogidoRigidbody = objetoCogido.GetComponent<Rigidbody>();
                         objetoCogidoPadre = objetoCogido.transform.parent;
                         objetoCogidoRigidbody.isKinematic = true;
-                        objetoCogido.transform.SetParent(transform);
+
+                        // Desactivar el objeto para que no sea visible ni interactuable
+                        objetoCogido.SetActive(false);
                         break;
                     }
                 }
@@ -34,7 +36,12 @@ public class RecolectarObjeto : MonoBehaviour
             {
                 // Soltar objeto si ya hay uno cogido
                 objetoCogidoRigidbody.isKinematic = false;
+
+                // Activar el objeto y establecer su posición sobre el suelo
+                objetoCogido.SetActive(true);
+                objetoCogido.transform.position = transform.position + Vector3.up * 0.5f; // Ajusta la altura según sea necesario
                 objetoCogido.transform.SetParent(objetoCogidoPadre);
+
                 objetoCogido = null;
                 objetoCogidoRigidbody = null;
                 objetoCogidoPadre = null;
@@ -42,7 +49,5 @@ public class RecolectarObjeto : MonoBehaviour
         }
     }
 }
-
-
 
 
