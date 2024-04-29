@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MaiaFeliz.unity
     guid: 14aac3adcd184d24f9c29943b8019827
+  - enabled: 1
+    path: Assets/Puzzle/Puzzle.unity
+    guid: 28cc13954085220428775e174e0f2ca0
   m_configObjects: {}

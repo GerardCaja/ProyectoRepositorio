@@ -5,20 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {
-    public void CambiarEscena(string MaiaFeliz)
-    {
-        SceneManager.LoadScene(MaiaFeliz);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Nombre de la escena del puzzle
+    public string Puzzle;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Verificar si se presiona la tecla "Q"
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            // Cargar la escena del puzzle
+            SceneManager.LoadScene(Puzzle);
+        }
     }
 }
 
