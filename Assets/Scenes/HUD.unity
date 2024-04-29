@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &10524049 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3430396003634048555, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
-  m_PrefabInstance: {fileID: 251255563}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a956ef548fe785c4a9bc4c12539e8598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &226104740 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4323764635153459930, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
@@ -229,12 +218,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6550656313498065569, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6550656313498065569, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 10524049}
+      objectReference: {fileID: 686286439}
     - target: {fileID: 6550656313498065569, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -245,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6550656313498065569, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CambioEscena, Assembly-CSharp
+      value: Menu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6550656313498065569, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -299,7 +288,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3430396003634048555, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 630050634728520964, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
@@ -309,6 +299,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4323764635153459930, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
       insertIndex: -1
       addedObject: {fileID: 226104742}
+    - targetCorrespondingSourceObject: {fileID: 7853597294544535222, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 686286439}
     - targetCorrespondingSourceObject: {fileID: 1800779200260706722, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1892959081}
@@ -526,6 +519,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &686286437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7853597294544535222, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
+  m_PrefabInstance: {fileID: 251255563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &686286439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686286437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea985c939b08ef4e8172afc876952dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreDeEscena: NivelCasa
+  NivelCasa: NivelCasa
 --- !u!1 &996987724 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3867795758245063154, guid: fbc128f28c1f8704e9fdb14c20f4e043, type: 3}
