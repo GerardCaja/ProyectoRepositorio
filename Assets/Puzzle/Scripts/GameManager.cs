@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
   [SerializeField] private Transform gameTransform;
@@ -78,6 +79,14 @@ public class GameManager : MonoBehaviour {
         }
       }
     }
+
+     // Comprobación si se ha presionado la tecla "Esc"
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Cargar la escena del nivel principal (asumiendo que su nombre es "LevelMain")
+            SceneManager.LoadScene("NivelCasa");
+        }
+
   }
 
   // colCheck is used to stop horizontal moves wrapping.

@@ -17,6 +17,7 @@ public class DialogueAnimation : MonoBehaviour
     //private string[] dialogueLines;
     private int currentLine;
     private bool playerInRange = false;
+    public float distanciaMaxima = 3f;
 
     void Start()
     {
