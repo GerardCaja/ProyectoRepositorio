@@ -4,59 +4,20 @@ using UnityEngine;
 
 public class cartahospital : MonoBehaviour
 {
-    public float interactionDistance = 3f;
-    public GameObject interactionUI; // Canvas que se activará cuando el jugador esté en el rango
-
-    private Transform player;
+    public GameObject objeto; // El objeto con el que el jugador interactuará
+    public GameObject canvas; // El canvas que quieres activar y desactivar
+    public float distanciaInteraccion = 5f; // La distancia a la que el jugador puede interactuar con el objeto
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Tecla E presionada");
-            Interact();
-        }
-    }
+        // Calcula la distancia entre el jugador y el objeto
+        float distancia = Vector3.Distance(objeto.transform.position, transform.position);
 
-    void Interact()
-    {
-        if (IsPlayerInRange())
+        // Si el jugador está lo suficientemente cerca y presiona la tecla "E"
+        if (distancia <= distanciaInteraccion && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Jugador en rango");
-            interactionUI.SetActive(true);
-        }
-        else
-        {
-            Debug.Log("Jugador fuera de rango");
-            interactionUI.SetActive(false);
-        }
-    }
-
-    bool IsPlayerInRange()
-    {
-        if (player != null)
-        {
-            float distance = Vector3.Distance(transform.position, player.position);
-            return distance <= interactionDistance;
-        }
-        return false;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            player = other.transform;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            player = null;
-            interactionUI.SetActive(false);
+            // Cambia el estado de activación del canvas
+            canvas.SetActive(!canvas.activeSelf);
         }
     }
 }
-
