@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/NivelCasa.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/NivelHospital.unity
+    guid: 1fd59091a9cbccb479904de1ac45b71e
+  - enabled: 1
+    path: Assets/Scenes/NivelEscuela.unity
+    guid: 260b5479a585d0f4d80be41a614f752c
+  - enabled: 1
     path: Assets/Scenes/MaiaFeliz.unity
     guid: 14aac3adcd184d24f9c29943b8019827
   - enabled: 1
