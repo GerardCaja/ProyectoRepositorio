@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class VictoriaHospital : MonoBehaviour
 {
+    public GameObject completionScreen;
     private int objetosRecogidos = 0;
     private int totalObjetos = 3;
 
@@ -14,8 +14,8 @@ public class VictoriaHospital : MonoBehaviour
 
         if (objetosRecogidos >= totalObjetos)
         {
-            // Cambia a la siguiente escena
-            SceneManager.LoadScene("Victoria");
+            // Carga el canvas de victoria
+            completionScreen.SetActive(true);
         }
     }
 }

@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class CambioEscena : MonoBehaviour
 {
     // Nombre de la escena del puzzle
-    public string Puzzle;
+    private LevelLoader levelLoader;
 
     // Distancia máxima a la que el jugador puede estar para activar el minijuego
     public float distanciaMaxima = 3f;
+
+    private void Start()
+    {
+        levelLoader = FindObjectOfType<LevelLoader>().GetComponent<LevelLoader>();
+    }
 
     void Update()
     {
@@ -17,7 +22,7 @@ public class CambioEscena : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && EstaCercaDelJugador())
         {
             // Cargar la escena del puzzle
-            SceneManager.LoadScene(Puzzle);
+            levelLoader.LoadLevel("Puzzle");
         }
     }
 

@@ -9,8 +9,14 @@ public class AlmacenarObjtos : MonoBehaviour
     public Image imagenObjeto1; // Imagen del objeto recolectado 1
     public Image imagenObjeto2; // Imagen del objeto recolectado 2
     public Image imagenObjeto3; // Imagen del objeto recolectado 3
+    public VictoriaHospital victoriaScript;
 
     private bool recolectado = false; // Flag para evitar recolección múltiple
+
+    private void Start()
+    {
+        victoriaScript = GetComponentInParent<VictoriaHospital>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,7 +33,7 @@ public class AlmacenarObjtos : MonoBehaviour
     {
         Debug.Log("Objeto recolectado y destruido: " + gameObject.name); // Mensaje de depuración para verificar si el objeto se recolecta y destruye correctamente
 
-           
+        victoriaScript.ObjetoRecogido();   
 
         // Destruye el objeto recolectable
         Destroy(gameObject);

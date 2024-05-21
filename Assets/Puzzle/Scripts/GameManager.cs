@@ -8,9 +8,14 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Transform piecePrefab;
 
   private List<Transform> pieces;
+    private bool hasStarted;
   private int emptyLocation;
   private int size;
   private bool shuffling = false;
+
+    public GameObject completionScreen;
+    public LevelLoader levelLoader;
+
 
   // Create the game setup with size x size pieces.
   private void CreateGamePieces(float gapThickness) {
@@ -52,18 +57,26 @@ public class GameManager : MonoBehaviour {
     pieces = new List<Transform>();
     size = 3;
     CreateGamePieces(0.01f);
+
+        levelLoader = FindObjectOfType<LevelLoader>().GetComponent<LevelLoader>();
   }
 
   // Update is called once per frame
   void Update() {
     // Check for completion.
     if (!shuffling && CheckCompletion()) {
-      shuffling = true;
+      shuffling = true;       
       StartCoroutine(WaitShuffle(0.5f));
     }
 
+    if(hasStarted && CheckCompletion())
+        {
+            completionScreen.SetActive(true);
+        }
+
     // On click send out ray to see if we click a piece.
     if (Input.GetMouseButtonDown(0)) {
+            hasStarted = true;
       RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
       if (hit) {
         // Go through the list, the index tells us the position.
@@ -80,14 +93,14 @@ public class GameManager : MonoBehaviour {
       }
     }
 
-     // Comprobación si se ha presionado la tecla "Esc"
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Comprobación si se ha presionado la tecla "Q"
+        if (Input.GetKeyDown(KeyCode.Q) && !CheckCompletion())
         {
-            // Cargar la escena del nivel principal (asumiendo que su nombre es "LevelMain")
-            SceneManager.LoadScene("NivelCasa");
+            // Use a coroutine to load the Scene in the background
+            levelLoader.LoadLevel("NivelCasa");
         }
 
-  }
+    }
 
   // colCheck is used to stop horizontal moves wrapping.
   private bool SwapIfValid(int i, int offset, int colCheck) {
