@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -8560,9 +8560,28 @@ MonoBehaviour:
   dialogueText: {fileID: 772728236}
   delay: 0.5
   dialogueLines:
-  - ausidflasdhas
-  - fdsfdsf
-  - "\xF1lkjhnh"
+  - "\xA1Buenos d\xEDas, dormilona!"
+  - "Anoche no aguantaste despierta ni siquiera hasta las 12 para poderte felicitar,
+    te quedaste dormida nada m\xE1s la cara te toc\xF3 la almohada, \xA1Ja ja! "
+  - "En fin, \xA1Feliz cumplea\xF1os! He planeado varias cosas para hoy, pero antes
+    de nada, sopla las velas!"
+  - "\xA1\xA1\xA1Bieeeen!!! Ya eres un a\xF1o m\xE1s vieja, ja ja, y por fin vas
+    a dejar de llamarme anciana!"
+  - "\xA1Sorpresa! Me he pedido un par de d\xEDas libres en el trabajo; me los merec\xEDa
+    luego de las horas extra que no me han pagado ni me pagar\xE1n. El jefe se ha
+    pillado un rebote, pero estoy cansada de ir tras suyo."
+  - "Por cierto, mi madre llam\xF3 esta ma\xF1ana para felicitarte, pero todav\xEDa
+    no estabas despierta as\xED que le he dicho que m\xE1s tarde la visitaremos al
+    hospital, \xBFTe parece bien?"
+  - "La pobre lleva unos d\xEDas bastante malos, as\xED que creo que le animar\xE1
+    bastante que vayamos."
+  - "He limpiado toda la casa antes de que despertases para que dediques el d\xEDa
+    a relajarte y no pienses en nada m\xE1s, as\xED que cuando salgas del cuarto
+    no dudes en echar un vistazo porque parece un piso nuevo, \xA1Ja ja ja!"
+  - "\xA1Ah, casi se me olvida! "
+  - "Antes de comenzar con todos nuestros planes, aseg\xFArate de hablarme cuando
+    termines de explorar la casa"
+  - "\xA1He preparado un peque\xF1o puzzle para ti!"
   dialogueIndex: 0
   textBox: {fileID: 0}
   distanciaMaxima: 3
@@ -16798,6 +16817,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7646002552499208759, guid: 365f14861e660eb4c915fa9c967c400a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 226.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646002552499208759, guid: 365f14861e660eb4c915fa9c967c400a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 158.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646002552499208759, guid: 365f14861e660eb4c915fa9c967c400a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 481.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989957664533335248, guid: 365f14861e660eb4c915fa9c967c400a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dd1f254cf5a02914794bfe5835137718, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
