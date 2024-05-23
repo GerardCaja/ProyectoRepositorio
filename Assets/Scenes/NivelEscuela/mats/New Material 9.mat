@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: cb0cbbd106a5c8d41a680dd772f3b126, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6becdb265c2ea8544a10d01dbfe4e844, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -88,7 +88,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cb0cbbd106a5c8d41a680dd772f3b126, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6becdb265c2ea8544a10d01dbfe4e844, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -180,7 +180,7 @@ Material:
     - _DstBlend: 0
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
-    - _EmissiveIntensity: 30152.691
+    - _EmissiveIntensity: 6653.9707
     - _EmissiveIntensityUnit: 1
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
@@ -264,8 +264,8 @@ Material:
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 30152.691, g: 6843.631, b: 0, a: 30152.691}
-    - _EmissiveColorLDR: {r: 1, g: 0.5137255, b: 0, a: 1}
+    - _EmissiveColor: {r: 0, g: 3330.822, b: 6653.9707, a: 6653.9707}
+    - _EmissiveColorLDR: {r: 0, g: 0.7357366, b: 1, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
