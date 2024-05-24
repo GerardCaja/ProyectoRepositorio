@@ -9586,10 +9586,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.022251371
-  m_Height: 0.04450274
+  m_Radius: 0.013541624
+  m_Height: 0.031338286
   m_Direction: 1
-  m_Center: {x: 0.0016796562, y: -0.000000001903127, z: 0.000011243678}
+  m_Center: {x: 0.010389469, y: 0.0065822178, z: 0.000011242544}
 --- !u!1 &1650007919
 GameObject:
   m_ObjectHideFlags: 0
@@ -12436,7 +12436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964363680437690967, guid: f178c5018eb38904c8a4d902c65ff62e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.04893383
+      value: 0.048933834
       objectReference: {fileID: 0}
     - target: {fileID: 5964363680437690967, guid: f178c5018eb38904c8a4d902c65ff62e, type: 3}
       propertyPath: m_LocalRotation.y
