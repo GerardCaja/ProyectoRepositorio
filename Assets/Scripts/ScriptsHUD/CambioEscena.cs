@@ -18,8 +18,8 @@ public class CambioEscena : MonoBehaviour
 
     void Update()
     {
-        // Verificar si se presiona la tecla "Q" y el jugador está cerca del objeto
-        if (Input.GetKeyDown(KeyCode.Q) && EstaCercaDelJugador())
+        // Verificar si se presiona la tecla "E" y el jugador está cerca del objeto
+        if (Input.GetKeyDown(KeyCode.E) && EstaCercaDelJugador())
         {
             // Cargar la escena del puzzle
             levelLoader.LoadLevel("Puzzle");

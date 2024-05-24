@@ -7863,12 +7863,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5815639784081069629, guid: b6feb2ec1913c8c43a7fce96be4d0c36, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815639784081069629, guid: b6feb2ec1913c8c43a7fce96be4d0c36, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815639784081069629, guid: b6feb2ec1913c8c43a7fce96be4d0c36, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073732170898393847, guid: b6feb2ec1913c8c43a7fce96be4d0c36, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8073732170898393847, guid: b6feb2ec1913c8c43a7fce96be4d0c36, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12130,7 +12142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e521b81ef7366348b8acab9797729fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteQ: {fileID: 21300000, guid: 9a3c0a42c8ba14240adc34347aea8079, type: 3}
+  spriteQ: {fileID: 21300000, guid: 2ab4a475ab0a31a4daeb43b02e68c338, type: 3}
   distanciaMostrar: 6
 --- !u!114 &1736689250
 MonoBehaviour:
@@ -12164,7 +12176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1767995857
 MonoBehaviour:
   m_ObjectHideFlags: 0
