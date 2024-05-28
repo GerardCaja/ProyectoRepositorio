@@ -6,6 +6,12 @@ public class Dialogar : MonoBehaviour
 {
     public GameObject canvas; // Asigna el Canvas en el Inspector
     public float distanciaMaxima = 3f;
+    private DialogueAnimation dialAnimScript;
+
+    private void Start()
+    {
+        dialAnimScript = GetComponent<DialogueAnimation>();
+    }
 
     void Update()
     {
@@ -14,6 +20,10 @@ public class Dialogar : MonoBehaviour
         {
             // Cambia el estado de activación del Canvas (si está activo, lo desactiva y viceversa)
             canvas.SetActive(!canvas.activeSelf);
+            if(canvas)
+            {
+                dialAnimScript.dialogueIndex = 0;
+            }
         }
     }
 

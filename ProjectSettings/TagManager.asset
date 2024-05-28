@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ObjetoRecogible
   - ObjetoInteractivo
+  - music
   layers:
   - Default
   - TransparentFX

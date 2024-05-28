@@ -59,7 +59,7 @@ public class DialogueAnimation : MonoBehaviour
         
     }
 
-    IEnumerator ShowText(string dialogueLine)
+    public IEnumerator ShowText(string dialogueLine)
     {
         imTalking = true;
         foreach(char letter in dialogueLine)
@@ -67,7 +67,7 @@ public class DialogueAnimation : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(delay);
         }
-        dialogueText.text = null; 
+        dialogueText.text = null;
         dialogueIndex++;
         ShowNextLine();
     }

@@ -8,6 +8,7 @@ public class VolumeSlider : MonoBehaviour
 {
     [SerializeField] private AudioMixer _mixer;
     [SerializeField] private string _volumeParameter;
+    public GameObject canvasOpciones;
     private Slider _volumeSlider;
     private Toggle _muteToggle;
     private bool muted;
@@ -25,7 +26,7 @@ public class VolumeSlider : MonoBehaviour
     void Start()
     {
         _volumeSlider.value = PlayerPrefs.GetFloat(_volumeParameter, _volumeSlider.maxValue);
-
+        
         string muteValue = PlayerPrefs.GetString(_volumeParameter + "Mute", "False");
 
         if(muteValue == "False")
@@ -38,6 +39,8 @@ public class VolumeSlider : MonoBehaviour
         }
 
         _muteToggle.isOn = !muted;
+
+        canvasOpciones.SetActive(false);
     }
 
     void OnDisable()
@@ -49,6 +52,11 @@ public class VolumeSlider : MonoBehaviour
     void ChangeVolume(float value)
     {
         _mixer.SetFloat(_volumeParameter, Mathf.Log10(value) * 20);
+    }
+
+    private void Update()
+    {
+        Debug.Log(PlayerPrefs.GetFloat(_volumeParameter));
     }
 
     void Mute(bool soundEnabled)
