@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour {
     }
 
         // Comprobación si se ha presionado la tecla "Q"
-        if (Input.GetKeyDown(KeyCode.Q) && !CheckCompletion())
+        if (Input.GetKeyDown(KeyCode.E) && !CheckCompletion())
         {
             // Use a coroutine to load the Scene in the background
             levelLoader.LoadLevel("NivelCasa");
